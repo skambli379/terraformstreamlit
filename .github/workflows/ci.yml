@@ -60,3 +60,4 @@ jobs:
     - name: Deploy to AKS
       run: |
         kubectl apply -f kubernetes/deployment.yaml
+        kubectl get svc
