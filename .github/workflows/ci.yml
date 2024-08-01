@@ -27,7 +27,7 @@ jobs:
       with:
         python-version: '3.9'
 
-    - name: Login to Azure
+    - name: Login to Azure using OIDC
       uses: azure/login@v1
       with:
         client-id: ${{ secrets.AZURE_CLIENT_ID }}
