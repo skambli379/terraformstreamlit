@@ -59,4 +59,5 @@ jobs:
 
     - name: Deploy to AKS
       run: |
+        kubectl get secrets
         kubectl apply -f kubernetes/deployment.yaml
