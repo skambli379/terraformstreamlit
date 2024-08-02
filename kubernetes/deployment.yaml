@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: streamlit-app
-        image: myacrregistrysk08.azurecr.io/terraformstreamlit:latest
+        image: myacrregistrysk08.azurecr.io/streamlit-app:latest
         ports:
         - containerPort: 8501
       imagePullSecrets:
