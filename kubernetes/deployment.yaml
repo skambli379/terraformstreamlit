@@ -17,6 +17,8 @@ spec:
         image: myacrregistrysk08.azurecr.io/terraformstreamlit:latest
         ports:
         - containerPort: 8501
+      imagePullSecrets:
+      - name: acr-secret
 ---
 apiVersion: v1
 kind: Service
