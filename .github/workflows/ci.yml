@@ -45,11 +45,11 @@ jobs:
         username: ${{ secrets.ACR_USERNAME }}
         password: ${{ secrets.ACR_PASSWORD }}
 
-    - name: Build and push Docker image
-      run: |
-        docker build -t streamlit-app:latest ./streamlit-app
-        docker tag streamlit-app:latest myacrregistrysk08.azurecr.io/streamlit-app:latest 
-        docker push myacrregistrysk08.azurecr.io/streamlit-app:latest
+    # - name: Build and push Docker image
+    #   run: |
+    #     docker build -t streamlit-app:latest ./streamlit-app
+    #     docker tag streamlit-app:latest myacrregistrysk08.azurecr.io/streamlit-app:latest 
+    #     docker push myacrregistrysk08.azurecr.io/streamlit-app:latest
 
     - name: Set up kubectl
       uses: azure/setup-kubectl@v3
