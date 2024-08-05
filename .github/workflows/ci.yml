@@ -47,7 +47,8 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/streamlit-app:latest ./streamlit-app
+        docker build -t streamlit-app:latest ./streamlit-app
+        docker tag streamlit-app:latest ${{ secrets.ACR_LOGIN_SERVER }}/streamlit-app:latest 
         docker push ${{ secrets.ACR_LOGIN_SERVER }}/streamlit-app:latest
 
     - name: Set up kubectl
