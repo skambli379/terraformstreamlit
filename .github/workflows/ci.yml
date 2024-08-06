@@ -50,7 +50,6 @@ jobs:
         docker build -t streamlit-app ./streamlit-app
         docker tag streamlit-app myacrregistrysk08.azurecr.io/streamlit-app:latest 
         docker push myacrregistrysk08.azurecr.io/streamlit-app:latest
-        az acr show --name myacrregistrysk08 --query loginServer --output table
 
     - name: Set up kubectl
       uses: azure/setup-kubectl@v3
