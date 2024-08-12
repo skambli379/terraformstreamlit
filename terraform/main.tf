@@ -3,7 +3,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = ">= 2.0.0"
+      version = ">= 3.0.0"
     }
   }
 }
@@ -34,7 +34,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
   default_node_pool {
     name       = "default"
     node_count = 1
-    vm_size    = "Standard_D2pds_v5"
+    vm_size    = "Standard_D4s_v3"
   }
 
   identity {
@@ -49,7 +49,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
 resource "azurerm_kubernetes_cluster_node_pool" "user" {
   name                  = "usernp"
   kubernetes_cluster_id = azurerm_kubernetes_cluster.aks.id
-  vm_size               = "Standard_D2pds_v5"
+  vm_size               = "Standard_D4s_v3"
   node_count            = 1
 }
 
