@@ -46,12 +46,12 @@ resource "azurerm_kubernetes_cluster" "aks" {
   ]
 }
 
-resource "azurerm_kubernetes_cluster_node_pool" "user" {
-  name                  = "usernp"
-  kubernetes_cluster_id = azurerm_kubernetes_cluster.aks.id
-  vm_size               = "Standard_D4s_v3"
-  node_count            = 1
-}
+# resource "azurerm_kubernetes_cluster_node_pool" "user" {
+#   name                  = "usernp"
+#   kubernetes_cluster_id = azurerm_kubernetes_cluster.aks.id
+#   vm_size               = "Standard_D4s_v3"
+#   node_count            = 1
+# }
 
 data "azurerm_client_config" "example" {}
 
